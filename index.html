@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIVE Button</title>
+
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:transparent;
+}
+
+.live-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:8px 20px;
+    border:3px solid #000;
+    border-radius:30px;
+    background:#fff;
+    color:#000;
+    font-size:24px;
+    font-weight:bold;
+    font-family:Arial,sans-serif;
+    text-decoration:none;
+    box-shadow:0 3px 8px rgba(0,0,0,.25);
+}
+
+.live-dot{
+    width:18px;
+    height:18px;
+    background:#ff0000;
+    border-radius:50%;
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    0%{
+        opacity:1;
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(255,0,0,.8);
+    }
+    50%{
+        opacity:.2;
+        transform:scale(1.4);
+        box-shadow:0 0 0 10px rgba(255,0,0,0);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(255,0,0,.8);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a class="live-btn"
+href="https://www.youtube.com/@YOURCHANNEL/live"
+target="_blank">
+
+<span class="live-dot"></span>
+LIVE
+
+</a>
+
+</body>
+</html>
