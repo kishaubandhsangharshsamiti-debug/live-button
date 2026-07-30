@@ -7,162 +7,169 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background:transparent;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:transparent;
+font-family:Arial,Helvetica,sans-serif;
 }
 
-.liveYoutube-btn{
+/* Main Button */
 
-    display:flex;
-    align-items:center;
-    gap:14px;
+.youtube-live{
 
-    padding:12px 28px;
+display:flex;
+align-items:center;
+gap:15px;
 
-    background:#FF0000;
+padding:12px 28px;
 
-    color:#fff;
+background:#FF0000;
 
-    text-decoration:none;
+border-radius:60px;
 
-    border-radius:50px;
+text-decoration:none;
 
-    font-family:Arial,Helvetica,sans-serif;
+color:#fff;
 
-    font-size:26px;
+font-size:28px;
 
-    font-weight:bold;
+font-weight:bold;
 
-    box-shadow:0 0 15px rgba(255,0,0,.6);
+box-shadow:
+0 0 15px rgba(255,0,0,.6),
+0 0 30px rgba(255,0,0,.35);
 
-    animation:pulse 1.2s infinite;
+animation:glow 1.2s infinite;
 
-    transition:.3s;
-
-}
-
-.liveYoutube-btn:hover{
-
-    transform:scale(1.05);
+transition:.3s;
 
 }
 
-/* YouTube Logo */
+.youtube-live:hover{
+
+transform:scale(1.08);
+
+}
+
+/* Official YouTube Logo */
 
 .logo{
 
-    width:42px;
-
-    height:30px;
-
-    background:#fff;
-
-    border-radius:8px;
-
-    position:relative;
-
-    flex-shrink:0;
+width:46px;
+height:32px;
+background:#fff;
+border-radius:10px;
+position:relative;
+flex-shrink:0;
 
 }
 
-.logo:before{
+.logo:after{
 
-    content:"";
+content:"";
 
-    position:absolute;
+position:absolute;
 
-    left:15px;
+left:17px;
+top:8px;
 
-    top:7px;
+width:0;
+height:0;
 
-    width:0;
-
-    height:0;
-
-    border-top:8px solid transparent;
-
-    border-bottom:8px solid transparent;
-
-    border-left:13px solid #FF0000;
+border-top:8px solid transparent;
+border-bottom:8px solid transparent;
+border-left:14px solid #FF0000;
 
 }
 
-/* LIVE Dot */
+/* LIVE DOT */
 
-.liveYoutube-dot{
+.live-dot{
 
-    width:14px;
+width:15px;
+height:15px;
 
-    height:14px;
+background:#fff;
 
-    background:#fff;
+border-radius:50%;
 
-    border-radius:50%;
+box-shadow:0 0 15px #fff;
 
-    box-shadow:0 0 10px #fff;
-
-    animation:blink .8s infinite;
+animation:blink .8s infinite;
 
 }
+
+/* Text */
 
 .text{
 
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
+display:flex;
+align-items:center;
+gap:12px;
 
 }
+
+/* LIVE Blink */
 
 @keyframes blink{
 
-    0%,100%{
+0%,100%{
 
-        opacity:1;
-
-        transform:scale(1);
-
-    }
-
-    50%{
-
-        opacity:.2;
-
-        transform:scale(.6);
-
-    }
+opacity:1;
+transform:scale(1);
 
 }
 
-@keyframes pulse{
+50%{
 
-    0%{
+opacity:.1;
+transform:scale(.5);
 
-        box-shadow:0 0 10px rgba(255,0,0,.5);
+}
 
-    }
+}
 
-    50%{
+/* Glow Animation */
 
-        box-shadow:0 0 35px rgba(255,0,0,1);
+@keyframes glow{
 
-    }
+0%{
 
-    100%{
+transform:scale(1);
 
-        box-shadow:0 0 10px rgba(255,0,0,.5);
+box-shadow:
+0 0 15px rgba(255,0,0,.6),
+0 0 25px rgba(255,0,0,.3);
 
-    }
+}
+
+50%{
+
+transform:scale(1.08);
+
+box-shadow:
+0 0 30px rgba(255,0,0,1),
+0 0 60px rgba(255,0,0,.8);
+
+}
+
+100%{
+
+transform:scale(1);
+
+box-shadow:
+0 0 15px rgba(255,0,0,.6),
+0 0 25px rgba(255,0,0,.3);
+
+}
 
 }
 
@@ -172,7 +179,7 @@ body{
 
 <body>
 
-<a class="liveYoutube-btn"
+<a class="youtube-live"
 href="https://www.youtube.com/@KishauBandhSangharshSamiti"
 target="_blank">
 
@@ -180,9 +187,9 @@ target="_blank">
 
 <div class="text">
 
-<div class="liveYoutube-dot"></div>
+<div class="live-dot"></div>
 
-<div>LIVE YouTube</div>
+<span>LIVE YouTube</span>
 
 </div>
 
