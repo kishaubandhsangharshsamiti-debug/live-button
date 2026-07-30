@@ -1,1 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>LIVE YouTube</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:transparent;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+/* ===== LIVE BUTTON ===== */
+
+.youtube-live{
+
+    display:inline-flex;
+    align-items:center;
+    gap:14px;
+
+    background:#FF0000;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    padding:14px 30px;
+
+    border-radius:60px;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    box-shadow:
+    0 0 12px rgba(255,0,0,.6),
+    0 0 28px rgba(255,0,0,.45);
+
+    animation:glow 1.2s infinite;
+
+    transition:.3s;
+
+}
+
+.youtube-live:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ===== YOUTUBE LOGO ===== */
+
+.logo{
+
+    width:48px;
+    height:34px;
+
+    background:#fff;
+
+    border-radius:10px;
+
+    position:relative;
+
+    flex-shrink:0;
+
+}
+
+.logo::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:18px;
+    top:9px;
+
+    width:0;
+    height:0;
+
+    border-top:8px solid transparent;
+    border-bottom:8px solid transparent;
+    border-left:14px solid #FF0000;
+
+}
+
+/* ===== LIVE DOT ===== */
+
+.live-dot{
+
+    width:14px;
+    height:14px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    animation:blink .8s infinite;
+
+    box-shadow:0 0 10px #fff;
+
+}
+
+/* ===== TEXT ===== */
+
+.text{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+/* ===== BLINK ===== */
+
+@keyframes blink{
+
+0%,100%{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+50%{
+
+opacity:.2;
+transform:scale(.6);
+
+}
+
+}
+
+/* ===== GLOW ===== */
+
+@keyframes glow{
+
+0%{
+
+transform:scale(1);
+
+box-shadow:
+0 0 10px rgba(255,0,0,.5),
+0 0 25px rgba(255,0,0,.35);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+box-shadow:
+0 0 25px rgba(255,0,0,1),
+0 0 60px rgba(255,0,0,.9);
+
+}
+
+100%{
+
+transform:scale(1);
+
+box-shadow:
+0 0 10px rgba(255,0,0,.5),
+0 0 25px rgba(255,0,0,.35);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a class="youtube-live"
+href="https://www.youtube.com/@KishauBandhSangharshSamiti"
+target="_blank">
+
+<div class="logo"></div>
+
+<div class="text">
+
+<div class="live-dot"></div>
+
+<span>LIVE YouTube</span>
+
+</div>
+
+</a>
+
+</body>
+</html>
